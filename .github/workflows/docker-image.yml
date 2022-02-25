@@ -28,3 +28,10 @@ jobs:
         with:
           push: true
           tags: scarbous/mongo-cron-dumper:latest
+      - 
+        name: Docker Hub Description
+        uses: peter-evans/dockerhub-description@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: scarbous/mongo-cron-dumper
